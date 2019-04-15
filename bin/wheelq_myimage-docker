@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# usage:
+# wheelq_myimage-docker --help
+# # wheelq_myimage-docker @your_vars
+
+mkdir -p ./vol
+docker run -t --rm --name wheelq_myimage -v $(pwd)/vol:/working -w /working wheelq_myimage $@
